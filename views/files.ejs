@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <title>Files | Medisave</title>
+</head>
+
+<body>
+    <div class="p-3" style="background-color:#f4f7fa;">
+        <div class="d-flex justify-content-around">
+            <div class="left-side-navbar">
+                <div class="cancel-btn"><i class="bi bi-x"></i></div>
+                <div class="">
+                    <div class="logo d-flex justify-content-center mt-3">
+                        <img src="images/Netguru_Avatars_Pack/Svg/Artboards_Diversity_Avatars_by_Netguru-04.svg"
+                            height="150px" width="auto" alt="">
+                    </div>
+                    <div class="title-text text-center fs-4">MediSave+</div>
+                    <div class="tab-group">
+                        <div class="tab"><i class="bi bi-hdd"></i> &nbsp; My Files</div>
+                        <div class="tab"><i class="bi bi-download"></i> &nbsp; Downloads</div>
+                        <div class="tab"><i class="bi bi-clock"></i> &nbsp; Recents</div>
+                        <div class="tab"><i class="bi bi-star"></i> &nbsp; Favorite</div>
+                        <div class="tab"><i class="bi bi-trash"></i> &nbsp; Trash</div>
+                        <div class="tab sponsor-block"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-side-block">
+                <div class="main-file-view-block" style="">
+                    <div class="navbar d-flex justify-content-start">
+                        <button class="mx-3 menu-btn"><i class="bi bi-list"></i></button>
+                        <div class="search">
+                            <input type="text" placeholder="Search">
+                            <button style="margin: 7px;"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="button-group ms-auto">
+                            <button class="mx-3"><i class="bi bi-funnel"></i> Filters</button>
+                            <button class=""><i class="bi bi-bell"></i></button>
+                            <button class="mx-3"><i class="bi bi-person"></i></button>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap justify-content-evenly">
+                        <div class="folders-block">
+                            <div class="title fs-6 title-text">Recent Files</div>
+                            <hr>
+                            <div class="folder-group d-flex flex-wrap justify-content-between">
+                                <% recentFiles.forEach(function(recentFile){ %>
+                                    <div class="file-folder-card">
+                                        <img src="images/file icons/file_sample_img.svg" alt="">
+                                        <div class="title-text">
+                                            <%= recentFile.name%>
+                                        </div>
+                                        <div class="text-muted small-text">
+                                            <%= recentFile.date%>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div>
+                        <div class="folders-block">
+                            <div class="title fs-6 title-text">Categories</div>
+                            <hr>
+                            <div class="folder-group d-flex flex-wrap justify-content-between">
+                                <div class="file-folder-card">
+                                    <img src="images/file icons/folder_sample_img.svg" alt="">
+                                    <div class="title-text">Prescriptions</div>
+                                    <div class="text-muted small-text">101 files | 1.2GB</div>
+                                </div>
+                                <div class="file-folder-card">
+                                    <img src="images/file icons/folder_sample_img.svg" alt="">
+                                    <div class="title-text">Reports</div>
+                                    <div class="text-muted small-text">101 files | 1.2GB</div>
+                                </div>
+                                <div class="file-folder-card">
+                                    <img src="images/file icons/folder_sample_img.svg" alt="">
+                                    <div class="title-text">Bills</div>
+                                    <div class="text-muted small-text">101 files | 1.2GB</div>
+                                </div>
+                                <div class="file-folder-card">
+                                    <img src="images/file icons/folder_sample_img.svg" alt="">
+                                    <div class="title-text">Recipts</div>
+                                    <div class="text-muted small-text">101 files | 1.2GB</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="upload-block">
+                            <div class=" title text-center mt-2 fs-6 mx-5 title-text">Upload File &nbsp;&nbsp;<button
+                                    class="ui-control-btn upload-menu-dropdown-btn"><i
+                                        class="bi bi-caret-up-fill"></i></button>
+                            </div>
+                            <div class=" mx-2 upload-window folder-group">
+                                <hr>
+
+                                <form action="post">
+                                    <div><input type="text" placeholder="Enter Disease name"></div>
+                                    <div><input type="date" name="" id=""></div>
+                                    <div class="file-input"><input type="file" name="" id=""
+                                            accept="image/x-png,image/jpeg,application/pdf"></div>
+                                    <div class="small-text text-muted">* Only img and pdf files are supported</div>
+                                    <div class="my-4"><button class="btn btn-primary">Upload</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(".upload-menu-dropdown-btn").click(function () {
+            $(".upload-window").toggleClass("showme");
+            $(".upload-menu-dropdown-btn").toggleClass("rotate")
+        })
+        $(".menu-btn").click(function () {
+            $(".left-side-navbar").toggleClass("showmenu");
+            $(".cancel-btn").toggleClass("showme");
+        })
+        $(".cancel-btn").click(function () {
+            $(".left-side-navbar").toggleClass("showmenu");
+            $(".cancel-btn").toggleClass("showme");
+        })
+    </script>
+</body>
+
+</html>

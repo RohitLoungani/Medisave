@@ -1,0 +1,165 @@
+body {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(to top left, white, #F2EFEB);
+  
+  /* background: linear-gradient(139deg, #a9f5e8, #1571a5); */
+  /* #0972C4 */
+  
+  -webkit-animation: gradient-change 30s ease infinite;
+  -moz-animation: gradient-change 30s ease infinite;
+  animation: gradient-change 30s ease infinite;
+  /* color: white; */
+}
+.btn-bd-primary {
+  font-weight: 600;
+  color: #fff;
+  background-color: #7952b3;
+  border-color: #7952b3;
+}
+.btn-bd-primary:hover, .btn-bd-primary:active {
+  color: #fff;
+  background-color: #61428f;
+  border-color: #61428f;
+}
+.btn-bd-primary-outline {
+  font-weight: 600;
+  color: #7952b3;
+  /* background-color: #7952b3; */
+  border-color: #7952b3;
+}
+.btn-bd-primary-outline:hover, .btn-bd-primary-outline:active {
+  color: #fff;
+  background-color: #61428f;
+  border-color: #61428f;
+}
+.glass-bg {
+  background: rgba(251, 251, 251, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(9px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.main-heading {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.sub-heading {
+  font-size: 32px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.hero-title{
+
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+ 
+body::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 6x rgba(0, 0, 0, 0.3); */
+  background:white;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #77B7E3;
+  border-radius: 8px;
+  outline: 1px solid slategrey;
+}
+
+.navtabs div a{
+  color: black;
+  text-decoration:none;
+  font-weight: 600;
+}
+
+.company-tag-bg{
+  background: rgba( 255, 255, 255, 0.5 );
+box-shadow: 0 8px 32px 0 #E2E7F4;
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+width: fit-content;
+padding:20px;
+}
+
+.company-tag-bg img{
+  height: 20px;
+  width: auto;
+}
+.svg-wave-bottom{
+  position: absolute;
+  top: auto;
+  bottom: 0;
+
+}
+
+.footer-links{
+  color: #5f6368;
+  text-decoration: none;
+}
+.footer-links:hover{
+  color: black;
+}
+
+.gradient-bg {
+  background: linear-gradient(139deg, #a9f5e8, #1571a5);
+  -webkit-animation: gradient-change 30s ease infinite;
+  -moz-animation: gradient-change 30s ease infinite;
+  animation: gradient-change 30s ease infinite;
+}
+
+@-webkit-keyframes gradient-change {
+  0%{background-position:0% 19%}
+  50%{background-position:100% 82%}
+  100%{background-position:0% 19%}
+}
+@-moz-keyframes gradient-change {
+  0%{background-position:0% 19%}
+  50%{background-position:100% 82%}
+  100%{background-position:0% 19%}
+}
+@keyframes gradient-change {
+  0%{background-position:0% 19%}
+  50%{background-position:100% 82%}
+  100%{background-position:0% 19%}
+}
+.hero-image img {
+  height: 300px;
+}
+.main-block-first{
+  width: 400px;
+}
+@media only screen and (max-width: 900px) {
+  .hero-image img {
+    height: 250px;
+    width: auto;
+  }
+  .main-block-first{
+    width: auto;
+    text-align: center;
+    margin: 30px ;
+  }
+
+}
+/* card css  */
+.card-title{
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  
+}
+.card-content{
+  font-size: 14px;
+}
+
+.card-image img{
+  margin:0;
+  padding: 0;
+  border-radius: 6px;
+}
